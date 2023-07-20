@@ -16,7 +16,7 @@ module GemUpdater
     # Run `bundle update` to update gems.
     def update!(gems)
       Bundler.ui.warn 'Updating gems...'
-      Bundler::CLI.start(['update'] + gems)
+      Bundler::CLI.start(['update'] + ['--patch'])
     end
 
     # Compute the diffs between two `Gemfile.lock`.
